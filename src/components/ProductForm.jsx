@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const ProductForm = () => {
+const ProductForm = (props) => {
 
     const [newTitle , setTitle] = useState('');
     const [newDate , setDate] = useState('');
@@ -43,6 +43,8 @@ const ProductForm = () => {
                 date:newDate
             }
             console.log(productData)
+
+            props.onsaveProductDisplay(productData)
 
             setTitle('')
             setDate('')

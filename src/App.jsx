@@ -25,6 +25,10 @@ const App = () => {
   }
 
 
+  function printProductData(data){
+    console.log(data)
+  }
+
 
   return (
     <div className="bg-red-300">{title}
@@ -32,7 +36,7 @@ const App = () => {
     <button onClick={checkDateHandler}>check Date</button>
       <button onClick={clickHandler} className="border-[2px] rounded-xl border-yellow-400">Change UI</button>  
 
-      <NewProduct/>
+      <NewProduct displayProduct ={printProductData}/>
       </div>
   )
 }
